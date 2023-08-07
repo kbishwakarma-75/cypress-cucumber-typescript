@@ -8,7 +8,7 @@ async function setupNodeEvents(
   config: Cypress.PluginConfigOptions
 ): Promise<Cypress.PluginConfigOptions> {
   await addCucumberPreprocessorPlugin(on, config)
-
+ 
   on(
     'file:preprocessor',
     createBundler({

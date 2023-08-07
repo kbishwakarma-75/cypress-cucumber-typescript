@@ -18,13 +18,14 @@ export default class DuckduckgoPage {
     cy.get(this._btnSearch).should('be.visible').click()
   }
 
-  resultText(callback: (text: string) => void): void {
+  resultText():void {
     //cy.get(this._resultSearch, { timeout: 20000 }).then(($elem) => {
-      //callback($elem.text())
+     //callback($elem.text())
       cy.get(this._resultSearch)
       .invoke('attr', 'href')
       .then((href) => console.log(href));
     }
 
   }
+
 
