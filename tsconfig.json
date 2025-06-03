@@ -1,12 +1,23 @@
 {
   "compilerOptions": {
-    "target": "ES2022",
-    "lib": ["ES2022", "dom"],
-    "types": ["cypress", "node"],
-    "moduleResolution": "node",
-    "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true
+    "strict": true,
+    "target": "es6",
+    "module": "commonjs",
+    "lib": [
+      "es6",
+      "dom"
+    ],
+    "types": [
+      "cypress"
+    ],
+    "baseUrl": "./",
+    "paths": {
+      "@/*": [
+        "cypress/e2e/*"
+      ]
+    }
   },
-  "include": ["**/*.ts"]
+  "include": [
+    "cypress/**/*.ts"
+  ]
 }

@@ -5,7 +5,6 @@ Feature: Search engine on the Duckduckgo website
     Given I go to the Duckduckgo page
     And I see "DuckDuckGo" in the title
 
-  @smoke
   Scenario: Using the search input with the text "smoke test"
     Given I fill the search input with the "smoke test" term on the Search Engine page
     When I click on the search button on the Search Engine page
@@ -17,6 +16,6 @@ Feature: Search engine on the Duckduckgo website
     Then the text "<expected_text>" should be visible on the result page on the Search Engine page
 
     Examples:
-      | search_text | expected_text |
-      | cypress automation    | cypress.io    |
-      | javascript  | JavaScript    |
+      | search_text        | expected_text |
+      | cypress automation | cypress.io    |
+      | javascript         | JavaScript    |
